@@ -1,0 +1,115 @@
+// News==========================================================================
+.news {
+    font-size: 1rem;
+    @include background-gradient();
+
+    padding: 60px 0 60px;
+    @media (min-width:520px) {
+        padding: 70px 0 70px;
+    }
+    @media (min-width:980px) {
+        padding: 90px 0 80px;
+    }
+
+    &-content {
+        @media (min-width:980px) {
+            @include flex();
+            flex-direction: row-reverse;
+        }
+
+        &__title {
+            @media (min-width:980px) {
+                width: 10%;
+            }
+
+            & h3 {
+                @include section-title();
+                text-align: center;
+                margin-bottom: 30px;
+
+                @media (min-width:980px) {
+                    margin-left: 30px;
+                    position: relative;
+                    writing-mode: vertical-rl;
+                    text-orientation: upright;
+
+                    &::before,&::after {
+                        height: 22px;
+                        width: 1px;
+                        position: absolute;
+                    }
+                    &::before {
+                        left: 12px;
+                        top: -32px;
+                    }
+                    &::after {
+                        left: 12px;
+                        top: 121px;
+                    }
+                }
+            }
+        }
+        &__article {
+            text-align: left;
+            width: 100%;
+            margin: 0 auto 20px;
+            @media (min-width:980px) {
+                width: 28%;
+                &:nth-of-type(2) {
+                    margin-top: 30px;
+                }
+                &:nth-of-type(3) {
+                    margin-top: 60px;
+                }
+                &:nth-of-type(4) {
+                    margin-top: 90px;
+                }
+            }
+            // & div {
+            //     width: 100%;
+            //     height: 177px;
+            //     background-image: url("../img/light3.jpg");
+            //     background-size: cover;
+            //     background-position: center top;
+            // }
+            img {
+                display: block;
+                margin: 0 auto;
+                @media (min-width:980px) {
+                    width: 100%;
+                    height: 177px;
+                }
+            }
+
+            div {
+                background-color: #fff;
+                padding: 10px 7px;
+            }
+
+            time {
+                font-size: 0.7em;
+                display: block;
+            }
+
+            p {
+                font-size: 0.875em;
+            }
+
+            a{
+                &:hover .news-content__article__img {
+                    transition: all 0.1s ease-in;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    &-btn {
+        text-align: center;
+        a {
+            @include btn;
+        }
+        @media (max-width:520px) {
+            margin-top: 30px;
+        }
+    }
+}

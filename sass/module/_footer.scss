@@ -1,0 +1,16 @@
+// Footer======================================================================
+footer {
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    height: 50px;
+
+    background-color: #06131B;
+    color: $white;
+
+    display: flex;
+    align-items: center;
+
+    small {
+        margin: 0 auto;
+    }
+}

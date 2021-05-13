@@ -1,0 +1,88 @@
+// Poduct================================================================================================
+.product {
+    font-size: 1rem;
+    @include background-gradient();
+    text-align: center;
+
+    padding: 60px 0 60px;
+    @media (min-width:520px) {
+        padding: 70px 0 70px;
+    }
+    @media (min-width:980px) {
+        padding: 80px 0 80px;
+    }
+
+    @media (min-width:520px) {
+        &-lists {
+            // background: #000;
+            display: flex;
+            &__left {
+                width: 50%;
+            }
+            &__right {
+                width: 50%;
+            }
+        }
+    }
+
+    &-title {
+        @include section-title;
+    }
+
+    &-text {
+        margin: 30px 0;
+        @media (min-width:520px) {
+            margin: 40px 0;
+        }
+    }
+
+    &-content {
+        &__img {
+            position: relative;
+            overflow: hidden;
+            background: #06131B;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                @media (min-width:980px) {
+                    &:hover {
+                        transform: scale(1.2);
+                        transition-duration: 1.5s;
+                        opacity: 0.6;
+                    }
+                }
+            }
+            span {
+                font-size: 1.5em;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+            & .click {
+                font-size: 1.2em;
+                display: block;
+                width: 50%;
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                text-align: right;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    width: 40px;
+                    height: 7px;
+                    border-bottom: 1px solid #000;
+                    border-right: 1px solid #000;
+                    transform: skew(45deg);
+                }
+                @media (min-width:980px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

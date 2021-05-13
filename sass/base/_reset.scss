@@ -1,0 +1,33 @@
+// リセットCSS=====================================================================================================
+/* リセットCSS */
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 77%;
+    letter-spacing: 0.2em;
+    color: #1B1B1B;
+
+    @media (min-width:520px) {
+        font-size: 87.5%;
+    }
+    @media (min-width:980px) {
+        font-size: 100%;
+    }
+}
+
+body {
+    line-height: 1.8;
+    font-family: serif;
+}
